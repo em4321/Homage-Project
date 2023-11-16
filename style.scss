@@ -1,0 +1,1134 @@
+$colour: #c9a16e;
+$font-medium: 1.6rem;
+$font-big: 2rem;
+$font-small: 1.2rem;
+$margin: 2rem;
+$background: #ffffff;
+
+%styling {
+  background-color: $background;
+  border: 1px solid #000000;
+}
+
+%hover {
+  color: $colour;
+  cursor: pointer;
+}
+
+%text {
+  text-align: center;
+}
+
+@mixin sizing($value1, $value2) {
+  height: $value1;
+  width: $value2;
+}
+@mixin spacing($margin1, $margin2) {
+  margin-left: $margin1;
+  margin-right: $margin2;
+}
+
+@mixin layout($type) {
+  display: $type;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: FontLight, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  color: #000000;
+}
+
+@font-face {
+  font-family: FontLight;
+  src: url(./Font-Light.woff) format("woff");
+  font-weight: 200;
+}
+@font-face {
+  font-family: FontSemiBold;
+  src: url(./Font-Semi-Bold.woff) format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: FontBold;
+  src: url(./Font-Bold.woff) format("woff");
+  font-weight: 600;
+}
+
+button {
+  @extend %styling;
+  padding: 1.4rem 4.5rem;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.email {
+  display: flex;
+}
+.email input {
+  @extend %styling;
+  padding: 1.4rem 4.5rem;
+  padding-left: 1.8rem;
+  font-size: 1.8rem;
+  width: 50rem;
+  justify-content: center;
+}
+
+.main-nav {
+  position: fixed;
+  width: 100%;
+  background-color: $background;
+  border-top: solid 1px #dcdcdc;
+  z-index: 2;
+}
+
+.top-top-nav {
+  @include layout(flex);
+  align-items: baseline;
+  align-content: center;
+}
+.header-logo img {
+  width: 10rem;
+  position: relative;
+  margin-right: 20rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tool-bar {
+  display: flex;
+  gap: 35%;
+  font-family: fontello;
+  padding: 1.2rem;
+  margin-right: 4rem;
+  ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .search,
+  .play,
+  .log-in {
+    font-size: 1.7rem;
+    &:hover {
+      @extend %hover;
+      text-decoration: underline;
+    }
+  }
+}
+.top-bottom-nav {
+  padding: 1.2rem;
+  border-bottom: solid 1px #dcdcdc;
+  border-top: solid 1px #dcdcdc;
+  nav ul {
+    display: flex;
+    gap: 3em;
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+  a {
+    &:hover {
+      @extend %hover;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  margin-left: $margin;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .burger-icon-bar {
+    @include sizing(2px, 21px);
+    background-color: #000000;
+    margin-bottom: 5px;
+  }
+}
+
+.pop-out-menu {
+  @include sizing(100vh, 100vw);
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: -2rem;
+  transform: translateY(-200vh);
+  transition: all 0.5s ease-in-out;
+  background-color: #f8f8f8;
+  z-index: 1;
+  .item {
+    height: 3.5rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $background;
+    }
+  }
+  .menu-line {
+    background-color: #dcdcdc;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: $font-medium;
+    color: #000000;
+    font-weight: 400;
+    font-family: FontSemiBold;
+  }
+
+  .Contributors {
+    font-family: fontello;
+    .icons {
+      @include spacing(6rem, 6rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8rem;
+      font-size: $font-medium;
+      span {
+        &:hover {
+          @extend %hover;
+        }
+        img {
+          width: 2.2rem;
+        }
+      }
+    }
+  }
+  ul ul {
+    display: none;
+  }
+  ul li {
+    &:focus-within > ul {
+      display: inherit;
+    }
+  }
+}
+
+.burger:focus-within .pop-out-menu {
+  transform: translateY(0);
+}
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  @include layout(flex);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.poster-image {
+  img {
+    width: 100vw;
+    margin-top: 8.2rem;
+    cursor: pointer;
+  }
+}
+
+.line {
+  background-color: $colour;
+  height: 1px;
+  margin-top: 1rem;
+  margin-bottom: $margin;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  overflow: hidden;
+  .image-one,
+  .image-two,
+  .image-three,
+  .image-four,
+  .image-five,
+  .image-six {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .overlay {
+      transform: translateY(0);
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 220px;
+  }
+  p,
+  small {
+    font-weight: 200;
+    flex-direction: row;
+    width: 15em;
+    text-align: center;
+    &:hover {
+      @extend %hover;
+    }
+  }
+  small {
+    font-size: $font-small;
+    margin-left: $margin;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}
+
+.overlay {
+  font-family: fontello;
+  font-size: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  background-color: $background;
+  opacity: 70%;
+  &:hover {
+    opacity: 100%;
+  }
+  .overlay-button {
+    width: 1px;
+    border: $background;
+    &:hover {
+      @extend %hover;
+      opacity: 100%;
+    }
+  }
+}
+
+h3 {
+  @extend %text;
+  font-size: $font-big;
+  font-weight: 200;
+  letter-spacing: 0.05rem;
+  margin-top: 1.2rem;
+  font-family: FontLight;
+}
+h4 {
+  font-size: $font-big;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  margin-left: 2.6rem;
+  font-family: FontSemiBold;
+}
+p {
+  font-size: 1.7rem;
+  font-weight: 200;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 2.6rem;
+}
+
+.ballet-images,
+.time-and-place {
+  flex-direction: column;
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .overlay-two {
+      transform: translateY(0);
+    }
+  }
+  img {
+    width: 100%;
+    margin: auto;
+    padding: 2.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h4 {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.overlay-two {
+  font-family: fontello;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 67%;
+  left: 81.5%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  opacity: 70%;
+  &:hover {
+    opacity: 100%;
+  }
+  .overlay-button {
+    border: $background;
+    background-color: $background;
+    &:hover {
+      @extend %hover;
+      opacity: 100%;
+    }
+  }
+}
+
+.logo {
+  width: 100px;
+}
+
+.main > .column > p {
+  @extend %text;
+  margin-right: 2.5rem;
+  line-height: 3rem;
+}
+
+.newsletter {
+  width: 100%;
+  margin: auto;
+  margin-bottom: $margin;
+
+  form {
+    text-align: left;
+    button {
+      margin-left: 17rem;
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+  input {
+    width: 42rem;
+  }
+}
+.toggle-container,
+.email {
+  margin: $margin;
+  margin-left: 4rem;
+  p {
+    width: 38rem;
+    text-align: left;
+    margin-left: 4.7rem;
+    font-size: $font-medium;
+  }
+}
+.toggle {
+  @include sizing(1.8rem, 3.2rem);
+  margin-left: 1rem;
+  position: relative;
+  display: inline-block;
+  background-color: #aeaeae;
+  border-radius: 3rem;
+  border: 0.5px solid #666;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.toggle::after {
+  @include sizing(1.55rem, 1.6rem);
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: $background;
+  top: 1px;
+  left: 1px;
+  transition: all 0.2s;
+}
+.checkbox:checked + .toggle::after {
+  left: 1.5rem;
+}
+.checkbox:checked + .toggle {
+  background-color: $colour;
+}
+.checkbox {
+  display: none;
+}
+.most-watched {
+  img {
+    @include sizing(29rem, 42rem);
+    margin: auto;
+    padding: 2.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h4 {
+    font-size: $font-big;
+    font-weight: 800;
+    text-align: center;
+    font-family: FontBold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  p {
+    @extend %text;
+    margin-bottom: 3rem;
+    font-family: FontLight;
+    font-size: 1.8rem;
+  }
+  .column {
+    width: 40rem;
+  }
+  .most-watched-one,
+  .most-watched-two {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover .overlay-three {
+      transform: translateY(0);
+    }
+  }
+}
+.overlay-three {
+  font-family: fontello;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 62%;
+  left: 78%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  opacity: 70%;
+  &:hover {
+    opacity: 100%;
+  }
+  .overlay-button {
+    border: $background;
+    background-color: $background;
+    &:hover {
+      @extend %hover;
+      opacity: 100%;
+    }
+  }
+}
+
+.share-the-love {
+  @extend %text;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  div {
+    width: 100%;
+  }
+  img {
+    width: 25rem;
+    margin-top: $margin;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  button {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 200;
+    &:hover {
+      @extend %hover;
+    }
+  }
+}
+
+.info-container {
+  .info {
+    #FB,
+    #YT {
+      font-family: fontello;
+    }
+    p {
+      @extend %text;
+      margin-right: 3rem;
+    }
+  }
+}
+
+.join-community {
+  display: flex;
+  .column {
+    width: 50rem;
+  }
+  p {
+    @extend %text;
+    font-size: $font-medium;
+    font-weight: 200;
+    margin-top: $margin;
+    margin-right: $margin;
+  }
+  div {
+    button {
+      margin: $margin;
+      font-size: 1.4rem;
+      font-weight: 200;
+      &:hover {
+        @extend %hover;
+      }
+    }
+    small {
+      font-size: $font-small;
+      font-weight: 200;
+      line-height: 2rem;
+      span {
+        color: $colour;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  .column {
+    width: 50rem;
+  }
+  p {
+    @extend %text;
+    line-height: 2rem;
+    margin: 5rem;
+  }
+  .icons {
+    @include spacing(5rem, 5rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9rem;
+    img {
+      width: 2.8rem;
+      &:hover {
+        @extend %hover;
+      }
+    }
+    span {
+      font-family: fontello;
+      font-size: $font-big;
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+}
+
+.more-to-love {
+  @extend %text;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  p,
+  h4 {
+    width: 22rem;
+    text-align: left;
+    font-weight: 200;
+    font-family: FontLight;
+    font-size: $font-big;
+    color: #666;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 20rem;
+    margin-top: $margin;
+    margin-bottom: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.social {
+  @include spacing(3rem, 3rem);
+  padding: 1rem;
+  width: 100%;
+  p {
+    @extend %text;
+  }
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8rem;
+    img {
+      width: 2.8rem;
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+  span {
+    font-family: fontello;
+    font-size: $font-big;
+    &:hover {
+      @extend %hover;
+    }
+  }
+}
+
+.main,
+h3,
+.newsletter,
+.most-watched,
+.share-the-love,
+.join-community,
+.social,
+.bottom-nav {
+  @extend %text;
+}
+
+.bottom-nav {
+  flex-wrap: wrap;
+  margin: 3rem;
+  nav ul li a {
+    font-size: $font-small;
+    font-weight: 200;
+    line-height: 6rem;
+    &:hover {
+      @extend %hover;
+    }
+  }
+}
+
+footer {
+  margin-bottom: 7rem;
+  margin-top: 4rem;
+  p {
+    @extend %text;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+  small {
+    @extend %text;
+    font-size: $font-small;
+    font-weight: 300;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .pop-out-menu {
+    width: 25rem;
+    margin-top: 5rem;
+    margin-left: -3rem;
+    .Contributors {
+      .icons {
+        @include spacing(2rem, 2rem);
+        gap: 4rem;
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .pop-out-menu {
+    margin-top: 6.7rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .pop-out-menu {
+    margin-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .ballet-images,
+  .time-and-place {
+    @include layout(flex);
+    justify-content: center;
+    .overlay-two {
+      top: 40%;
+      left: 60%;
+    }
+    img {
+      width: 100%;
+      margin: 1rem;
+      padding: 1rem;
+    }
+    .column {
+      width: 32%;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .tool-bar {
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .burger {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .newsletter {
+    display: flex;
+    justify-content: center;
+    h3 p {
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .share-the-love {
+    @include spacing(1rem, 1rem);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 599px) {
+  .share-the-love {
+    .info-container {
+      .info {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .share-the-love {
+    .FB-container,
+    .YT-container {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .more-to-love {
+    @include layout(flex);
+    justify-content: center;
+    img {
+      width: 100%;
+      margin: 1rem;
+      padding: 1rem;
+    }
+    .column {
+      width: 32%;
+      p {
+        width: 95%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .header-logo img {
+    @include sizing(8rem, 34rem);
+    margin-left: 28%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .top-bottom-nav nav {
+    margin-left: 28%;
+  }
+}
+@media screen and (min-width: 860px) {
+  .top-bottom-nav nav {
+    margin-left: 32%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .top-bottom-nav nav {
+    margin-left: 38%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .more-to-love {
+    .column h4,
+    p {
+      &:hover {
+        color: $colour;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #social-cards {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 40%;
+      left: 72%;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .image-one,
+  .image-two,
+  .image-three,
+  .image-four,
+  .image-five,
+  .image-six,
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three,
+  .most-watched-one,
+  .most-watched-two {
+    &:hover {
+      opacity: 65%;
+    }
+    .overlay-two {
+      top: 48%;
+      left: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .most-watched {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .column {
+      width: 40rem;
+    }
+    img {
+      @include sizing(25rem, 38rem);
+    }
+    .vertical-line {
+      @include spacing(2%, 2%);
+      border-left: solid 1px $colour;
+      height: 40rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .most-watched {
+    .column {
+      width: 45rem;
+    }
+    .overlay-three {
+      top: 55%;
+      left: 70%;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .most-watched {
+    .column {
+      margin: 2%;
+    }
+    img {
+      @include sizing(28rem, 42rem);
+    }
+    .overlay-three {
+      top: 60%;
+      left: 75%;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 52%;
+      left: 75%;
+    }
+  }
+}
+@media screen and (min-width: 950px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 55%;
+      left: 75%;
+    }
+  }
+}
+@media screen and (min-width: 1050px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 58%;
+      left: 75%;
+    }
+  }
+}
+@media screen and (min-width: 1140px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 62%;
+      left: 77%;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .ballet-image-one,
+  .ballet-image-two,
+  .ballet-image-three,
+  .ballet-image-four,
+  .ballet-image-five,
+  .ballet-image-six,
+  .time-and-place-image-one,
+  .time-and-place-image-two,
+  .time-and-place-image-three {
+    .overlay-two {
+      top: 68%;
+      left: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 1410px) {
+  .line {
+    width: 97vw;
+    margin-left: $margin;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .more-to-love {
+    display: flex;
+    position: relative;
+    img {
+      width: 18rem;
+      flex-direction: row;
+    }
+    .column {
+      width: 15%;
+      margin-right: 12rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .bottom-nav {
+    width: 100%;
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      font-size: 1.4rem;
+      font-weight: 200;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .footer {
+    width: 100%;
+    footer p {
+      display: flex;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 200;
+    }
+  }
+}
+@media screen and (min-width: 1390px) {
+  .poster-image {
+    img {
+      width: 92vw;
+    }
+  }
+  .slider {
+    width: 92vw;
+    margin-left: 6rem;
+  }
+}

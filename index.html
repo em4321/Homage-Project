@@ -1,28 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Homage-Project</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>NOWNESS</h1>
-    <button></button>
-    <button></button>
-    <button></button>
+      <div class="main-nav">
+        <div class="header">
+          <div class="burger" tabindex="0">
+            <div class="burger-icon-bar"></div>
+            <div class="burger-icon-bar"></div>
+            <div class="burger-icon-bar"></div>
+
+            <div class="pop-out-menu">
+              <div class="item"><a href="#">PLAYLISTS</a></div>
+
+              <div class="menu-line"></div>
+
+              <div class="item"><a href="#">SERIES</a></div>
+
+              <div class="menu-line"></div>
+
+              <div class="item"><a href="#">SPECIAL PROGRAMS</a></div>
+
+              <div class="menu-line"></div>
+
+              <div class="item"><a href="#">ART & DESIGN</a></div>
+              <div class="item"><a href="#">FASHION & BEAUTY</a></div>
+              <div class="item"><a href="#">MUSIC & DANCE</a></div>
+              <div class="item"><a href="#">FOOD & TRAVEL</a></div>
+              <div class="item"><a href="#">CULTURE & LIFESTYLES</a></div>
+
+              <div class="menu-line"></div>
+
+              <div class="item">
+                <a href="#">TOPICS</a>
+              </div>
+
+              <div class="menu-line"></div>
+
+              <div class="item">
+                <a href="#">PICKS</a>
+              </div>
+
+              <div class="menu-line"></div>
+
+              <div class="item">
+                <a href="#">CONTRIBUTORS</a>
+              </div>
+
+              <div class="menu-line"></div>
+
+              <div class="main">
+                <div class="Contributors">
+                  <div class="icons">
+                    <span
+                      ><img
+                        src="./Content-for-Homage-Project/instagram-icon.png"
+                        alt="Instagram"
+                    /></span>
+                    <span
+                      ><img
+                        src="./Content-for-Homage-Project/tiktok-icon.png"
+                        alt="TikTok"
+                    /></span>
+                    <span>D</span>
+                    <span>B</span>
+                    <span>?</span>
+                    <span>></span>
+                    <span>=</span>
+                    <span>O</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-line"></div>
+
+              <div class="item"><a href="#">ABOUT US</a></div>
+              <div class="item"><a href="#">MASTHEAD</a></div>
+              <div class="item"><a href="#">CONTACT US</a></div>
+
+              <div class="menu-line"></div>
+
+              <div class="item">
+                <ul>
+                  <li>
+                    <a href="#">SITES</a>
+                    <ul>
+                      <li><a href="#">.COM</a></li>
+                      <li><a href="#">.CN</a></li>
+                      <li><a href="#">.ASIA</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header-logo">
+            <img
+              src="./Content-for-Homage-Project/logo.svg"
+              alt="NOWNESS Logo"
+            />
+          </div>
+          <!-- item 3 -->
+          <div class="tool-bar">
+            <ul>
+              <li class="search">1</li>
+              <li class="play">"</li>
+              <li class="log-in">,</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Post top nav pre main -->
+        <div class="top-bottom-nav">
+          <nav>
+            <ul>
+              <li><a href="#">SERIES</a></li>
+              <li><a href="#">TOPICS</a></li>
+              <li><a href="#">PICKS</a></li>
+              <li><a href="#">SPECIAL PROGRAMS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
+    <!-- End of main nav -->
+
     <main>
-        
+      <div class="main">
+        <div class="poster-image">
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="./Poster-image-large.png"
+            />
+
+            <img
+              src="./Content-for-Homage-Project/Poster-image-small-with-text.png"
+              alt="picture of a man"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="slider">
+        <div class="one" id="one">
+          <small>November 8</small>
+          <div class="image-one">
+            <img
+              src="./Content-for-Homage-Project/Kulapat-Yantrasast.jpeg"
+              alt=""
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>Inner Worlds: Kulapat Yantrasast</p>
+        </div>
+
+        <div class="two" id="two">
+          <small>November 6</small>
+          <div class="image-two">
+            <img
+              src="./Content-for-Homage-Project/World-Service.jpeg"
+              alt="Image of boy"
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>World Service: Sleep Now in the Fire</p>
+        </div>
+
+        <div class="three" id="three">
+          <small>November 3</small>
+          <div class="image-three">
+            <img
+              src="./Content-for-Homage-Project/Fetish-United.jpeg"
+              alt="Image of woman"
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>Fetish United: Call Me Mommy</p>
+        </div>
+
+        <div class="four" id="four">
+          <small>November 1</small>
+          <div class="image-four">
+            <img
+              src="./Content-for-Homage-Project/Process-and-Focus.jpeg"
+              alt="Image of woman with blurred background"
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>Process and Focus</p>
+        </div>
+
+        <div class="five" id="five">
+          <small>October 30</small>
+          <div class="image-five">
+            <img
+              src="./Content-for-Homage-Project/Private-View.jpeg"
+              alt="Image of woman painting on canvas with hands"
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>Private View: Limb After Limb</p>
+        </div>
+
+        <div class="six" id="six">
+          <small>October 27</small>
+          <div class="image-six">
+            <img
+              src="./Content-for-Homage-Project/Blood-Rites.jpeg"
+              alt="Image of three woman looking shocked"
+            />
+            <div class="overlay">
+              <button class="overlay-button">'</button>
+              <button class="overlay-button">"</button>
+            </div>
+          </div>
+          <p>NOWNESS Shorts: Blood Rites</p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h3>BALLET IN FOCUS</h3>
+
+      <div class="main">
+        <div class="ballet-images">
+          <div class="column">
+            <div class="ballet-image-one">
+              <img
+                src="./Content-for-Homage-Project/Just-Dance.jpg"
+                alt="Two people doing ballet"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Just Dance: I Don't Need a Reason</h4>
+            <p>
+              Lady Camden of Ru Paul’s Drag Race serves regal realness in this
+              dance profile of Rex Wheeler
+            </p>
+          </div>
+
+          <div class="column">
+            <div class="ballet-image-two">
+              <img
+                src="./Content-for-Homage-Project/Pointe-Black.jpg"
+                alt="Woman doing ballet"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Pointe Black</h4>
+            <p>
+              A no-holds-barred portrait of a ballerina finding form in a
+              white-privileged world
+            </p>
+          </div>
+
+          <div class="column">
+            <div class="ballet-image-three">
+              <img
+                src="./Content-for-Homage-Project/Sink-or-Swim.jpg"
+                alt="Woman doing ballet in water"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Just Dance: Sink or Swim</h4>
+            <p>A solitary dancer’s balletic exploration of mental wellbeing</p>
+          </div>
+
+          <div class="column">
+            <div class="ballet-image-four">
+              <img
+                src="./Content-for-Homage-Project/Step-by-Step.jpg"
+                alt="Woman on floor pointing"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Step by Step: Lauren Cuthbertson</h4>
+            <p>
+              The London Royal Ballet principal returns to dance as a new mother
+            </p>
+          </div>
+
+          <div class="column">
+            <div class="ballet-image-five">
+              <img
+                src="./Content-for-Homage-Project/Forming.jpeg"
+                alt="Two people intertwined"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Forming</h4>
+            <p>
+              Partnering with Scottish Ballet, co-directors Eve McConnachie and
+              Chloe Rosser explore the experience of living with a neurological
+              condition through movement.
+            </p>
+          </div>
+
+          <div class="column">
+            <div class="ballet-image-six">
+              <img
+                src="./Content-for-Homage-Project/Be-A-Man.jpeg"
+                alt="Man jumping"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Be A Man</h4>
+            <p>Redefine masculinity with the Cuban bad boy of ballet</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h3>TIME & PLACE</h3>
+
+      <div class="main">
+        <div class="time-and-place">
+          <div class="column">
+            <div class="time-and-place-image-one">
+              <img
+                src="./Content-for-Homage-Project/How-Long-Is-Now.jpg"
+                alt="Man standing looking at ground"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>How Long Is Now?</h4>
+            <p>
+              Dance communicates the interactions that shape our experience of
+              the present in a short film from Barcelona fragrance brand 27 87
+            </p>
+          </div>
+          <div class="column">
+            <div class="time-and-place-image-two">
+              <img
+                src="./Content-for-Homage-Project/Poetic-License.jpeg"
+                alt="Woman with head on table"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>
+              Poetic License: the list of stupid questions I ask myself when I’m
+              high
+            </h4>
+            <p>
+              Sergii Shevtsov ponders life’s big questions and mindless
+              reflections in a surreal space where time stands still
+            </p>
+          </div>
+          <div class="column">
+            <div class="time-and-place-image-three">
+              <img
+                src="./Content-for-Homage-Project/LoveSick.jpg"
+                alt="Woman standing looking at view"
+              />
+              <div class="overlay-two">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>LoveSick: Secret Place</h4>
+            <p>
+              Ryan Zemke revisits lives lived through the imagination, and the
+              people and places that define both our memories and sense of self
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="main">
+        <div class="column">
+          <h3>SUBSCRIBE TO THE NOWNESS NEWSLETTER</h3>
+          <p>Be the first to hear about our latest releases</p>
+          <div class="newsletter">
+            <form>
+              <div class="email">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" id="switch" class="checkbox" />
+                <div class="toggle">
+                  <p>I would like to receive the NOWNESS newsletter</p>
+                </div>
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" id="switch2" class="checkbox" />
+                <div class="toggle">
+                  <p>
+                    I would like to receive emails from selected NOWNESS
+                    partners featuring exclusive offers
+                  </p>
+                </div>
+              </div>
+              <button>SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="main">
+        <div class="most-watched">
+          <div class="column">
+            <h3>MOST WATCHED</h3>
+            <div class="most-watched-one">
+              <img
+                src="./Content-for-Homage-Project/Satisfaction.jpg"
+                alt="Two yellow flowers and a bee"
+              />
+              <div class="overlay-three">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Satisfaction: Maisie Cousins</h4>
+            <p>
+              The provocative image-maker gets sticky and sweet for
+              #satisfaction
+            </p>
+          </div>
+
+          <div class="vertical-line"></div>
+
+          <div class="column">
+            <h3>MOST WATCHED</h3>
+            <div class="most-watched-two">
+              <img
+                src="./Content-for-Homage-Project/Define-Beauty.jpg"
+                alt="Underarm"
+              />
+              <div class="overlay-three">
+                <button class="overlay-button">'</button>
+                <button class="overlay-button">"</button>
+              </div>
+            </div>
+            <h4>Define Beauty: His Sweat</h4>
+            <p>
+              Celebrating over 15 million views, we revisit a viral episode of
+              this hit series, with a new interview with director Matt Lambert
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h3>SHARE THE LOVE</h3>
+      <div class="main" id="social-cards">
+        <div class="share-the-love">
+          <div class="column">
+            <img
+              src="./Content-for-Homage-Project/Share-the-Love-FB.jpeg"
+              alt="Two men from behind with arms around eachother"
+            />
+          </div>
+          <div class="info-container">
+            <div class="info">
+              <p>Facebook</p>
+              <p id="FB">D</p>
+              <p>Our daily feed.</p>
+            </div>
+            <button>LIKE</button>
+          </div>
+
+          <div class="column">
+            <img
+              src="./Content-for-Homage-Project/Share-the-Love-YT.jpeg"
+              alt="Woman leaning backwards"
+            />
+          </div>
+          <div class="info-container">
+            <div class="info">
+              <p>YouTube</p>
+              <p id="YT">></p>
+              <p>See everything, hear everything.</p>
+            </div>
+            <button>SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+
+      <div class="main">
+        <div class="join-community">
+          <div class="column">
+            <p>
+              Join the NOWNESS community to create your own playlists, rate and
+              comment on stories, subscribe to your favorite categories and
+              more.
+            </p>
+            <div><button>BECOME A NOWNESS MEMBER</button></div>
+            <div>
+              <small>Already a member? <span>Sign in</span></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="connect">
+          <div class="column">
+            <p>Connect with NOWNESS</p>
+            <div class="icons">
+              <span
+                ><img
+                  src="./Content-for-Homage-Project/instagram-icon.png"
+                  alt="Instagram"
+              /></span>
+              <span
+                ><img
+                  src="./Content-for-Homage-Project/tiktok-icon.png"
+                  alt="TikTok"
+              /></span>
+              <span>D</span>
+              <span>B</span>
+              <span>?</span>
+              <span>></span>
+              <span>=</span>
+              <span>O</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <article>
+        <h3>MORE TO LOVE</h3>
+        <div class="main">
+          <div class="more-to-love">
+            <div class="column">
+              <img
+                src="./Content-for-Homage-Project/Cucci-Cosmos.jpeg"
+                alt="Red and green image saying GUCCI COSMOS"
+              />
+              <h4>GUCCI COSMOS</h4>
+              <p>
+                The Italian fashion house’s travelling archival exhibition
+                arrives at 180 Studios, presenting an immersive exploration of
+                era-defining creativity. With exhibition design by contemporary
+                artist Es Devlin, Gucci Cosmos traces one of many possible
+                constellations connecting the ideas and inventions set in motion
+                by the creative directors and artisans over the past 102 years.
+                Italian fashion theorist and critic Maria Luisa Frisa has drawn
+                together treasures, many of which take their first trip outside
+                of the archive, to portray how Gucci has and continues to not
+                only mirror the times, but also define them. 11 October - 31
+                December 2023.
+              </p>
+            </div>
+            <div class="column">
+              <img
+                src="./Content-for-Homage-Project/UVA.jpeg"
+                alt="Man standing with blue background"
+              />
+              <h4>UVA - Synchronicity</h4>
+              <p>
+                Pioneering immersive art collective United Visual Artists unveil
+                their largest ever exhibition, taking over the subterranean
+                spaces of 180 Studios. Marking the artist's 20th anniversary,
+                and challenging our perception of reality, among eight new
+                large-scale immersive works and sensory-heightening premieres, a
+                brand new audiovisual installation explores the relationship
+                between humans and animals, featuring a mesmerising soundscape
+                created by legendary bioacoustician Bernie Krause. UVA’s
+                experimental practice uses light, space, sound and custom-made
+                “kinetic instruments” to create dynamic, immersive experiences
+                and atmospheric performances that envelop the viewer and
+                transfigure vast architectural spaces through the interplay of
+                light and shadow. 12 October - 17 December 2023.
+              </p>
+            </div>
+            <div class="column">
+              <img
+                src="./Content-for-Homage-Project/Cugoano250.jpeg"
+                alt="Side profile of man"
+              />
+              <h4>Cugoano250: Julianknxx Performance - Chorus in Flight</h4>
+              <p>
+                Coinciding with Frieze London and his exhibition Chorus in
+                Rememory of Flight at Barbican, Julianknxx takes the stage at St
+                James’s Piccadilly for Ekow Eshuns’ Cugoano250 programme in ode
+                to abolitionist and historial figure in Black Britain, Quobna
+                Ottobah Cugoano. Performing songs which echo the notion of
+                ‘flight’ in relation to Africa, the interdisciplinary artist,
+                poet, and filmmaker assembles a special performance with a
+                community choir and other collaborators for a choral performance
+                commemorating the 250th anniversary of the baptism of Cugoano at
+                St James’s. From 7pm, 14 October 2023.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="line"></div>
+
+      <div class="main">
+        <div class="social">
+          <div class="icons">
+            <span
+              ><img
+                src="./Content-for-Homage-Project/instagram-icon.png"
+                alt="Instagram"
+            /></span>
+            <span
+              ><img
+                src="./Content-for-Homage-Project/tiktok-icon.png"
+                alt="TikTok"
+            /></span>
+            <span>D</span>
+            <span>B</span>
+            <span>?</span>
+            <span>></span>
+            <span>=</span>
+            <span>O</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="main">
+        <div class="bottom-nav">
+          <nav>
+            <ul>
+              <li><a href="#">BECOME A MEMBER</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">CONTACT US</a></li>
+              <li><a href="#">PRIVACY</a></li>
+              <li><a href="#">TERMS OF SERVICE</a></li>
+              <li><a href="#">BECOME A CONTRIBUTOR</a></li>
+              <li><a href="#">SITE PATNERS</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </main>
-    <nav>
-        <ul>
-            <li><a href="#">Series</a></li>
-            <li><a href="#">Topics</a></li>
-            <li><a href="#">Picks</a></li>
-            <li><a href="#">Special Programs</a></li>
-        </ul>
-    </nav>
-</body>
+
+    <div class="footer">
+      <footer>
+        <p>&copy; 2023 广州现代移动数码传播有限公司版权所有</p>
+        <p>
+          &copy; 2023 MODERN MOBILE DIGITAL MEDIA CO. LTD. ALL RIGHTS RESERVED
+        </p>
+        <p><small>粤ICP备10213522号</small></p>
+      </footer>
+    </div>
+  </body>
 </html>
