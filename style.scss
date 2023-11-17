@@ -420,7 +420,8 @@ p {
   width: 100%;
   margin: auto;
   margin-bottom: $margin;
-
+  display: flex;
+  justify-content: center;
   form {
     text-align: left;
     button {
@@ -436,12 +437,15 @@ p {
 }
 .toggle-container,
 .email {
+  display: flex;
+  justify-content: center;
   margin: $margin;
-  margin-left: 4rem;
-  p {
+  margin-left: 3rem;
+
+  span {
     width: 38rem;
     text-align: left;
-    margin-left: 4.7rem;
+    margin-left: 1.5rem;
     font-size: $font-medium;
   }
 }
@@ -807,15 +811,6 @@ footer {
   }
 }
 
-@media screen and (min-width: 600px) {
-  .newsletter {
-    display: flex;
-    justify-content: center;
-    h3 p {
-      text-align: center;
-    }
-  }
-}
 @media screen and (min-width: 1025px) {
   .share-the-love {
     @include spacing(1rem, 1rem);

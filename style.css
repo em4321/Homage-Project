@@ -426,6 +426,8 @@ p {
   width: 100%;
   margin: auto;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .newsletter form {
   text-align: left;
@@ -439,14 +441,16 @@ p {
 
 .toggle-container,
 .email {
+  display: flex;
+  justify-content: center;
   margin: 2rem;
-  margin-left: 4rem;
+  margin-left: 3rem;
 }
-.toggle-container p,
-.email p {
+.toggle-container span,
+.email span {
   width: 38rem;
   text-align: left;
-  margin-left: 4.7rem;
+  margin-left: 1.5rem;
   font-size: 1.6rem;
 }
 
@@ -767,15 +771,6 @@ footer small:hover {
 @media screen and (min-width: 600px) {
   .burger {
     margin-left: 3rem;
-  }
-}
-@media screen and (min-width: 600px) {
-  .newsletter {
-    display: flex;
-    justify-content: center;
-  }
-  .newsletter h3 p {
-    text-align: center;
   }
 }
 @media screen and (min-width: 1025px) {
